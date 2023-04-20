@@ -1,0 +1,59 @@
+.container__page-home {
+  display: flex;
+  align-items: center;
+  justify-content: top;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("../../../assets/images/pexels-quang-nguyen-vinh-2144922.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .page__wrapper {
+    .wrapper__title {
+      top: 0;
+      transition: 1s ease all;
+      position: absolute;
+      z-index: 1;
+      .title__h1 {
+        transition: 1s ease all;
+        font-size: 18em;
+        color: $purple-2;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+      }
+    }
+    .wrapper__title-active {
+      top: -100vh;
+    }
+    .wrapper__content {
+      .content__product {
+        position: relative;
+        z-index: 2;
+        .product__image {
+          z-index: 1;
+          .image__img {
+            z-index: 3;
+            width: 30vw;
+            height: auto;
+            position: relative;
+            filter: saturate(0.8) brightness(90%) grayscale(10%);
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            transition: 1s ease all;
+          }
+          .image__img-active {
+            width: 50px;
+            top: 0;
+          }
+        }
+      }
+      .content__product-active {
+        position: fixed;
+      }
+    }
+  }
+}
